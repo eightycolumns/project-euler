@@ -1,21 +1,13 @@
 #include <inttypes.h>
-#include <stdbool.h>
 #include <stdio.h>
-
-bool is_divisible_by(int16_t a, int8_t b);
 
 int main(void) {
   int32_t answer = 0;
 
-  for (int16_t i = 0; i < 1000; i += 1) {
-    if (is_divisible_by(i, 3) || is_divisible_by(i, 5)) {
-      answer += i;
-    }
-  }
+  answer += 999 / 3 * (3 + 3 + (999 / 3 - 1) * 3) / 2;
+  answer += 999 / 5 * (5 + 5 + (999 / 5 - 1) * 5) / 2;
+
+  answer -= 999 / 15 * (15 + 15 + (999 / 15 - 1) * 15) / 2;
 
   printf("1) %" PRId32 "\n", answer);
-}
-
-bool is_divisible_by(int16_t a, int8_t b) {
-  return a % b == 0;
 }
