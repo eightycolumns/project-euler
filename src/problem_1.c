@@ -18,7 +18,6 @@ int32_t sum_of_multiples_of(int8_t common_difference) {
   int16_t n = 999 / common_difference;
   int8_t first_term = common_difference;
   int16_t nth_term = first_term + (n - 1) * common_difference;
-  int32_t nth_partial_sum = n * (first_term + nth_term) / 2;
 
-  return nth_partial_sum;
+  return n * (first_term + nth_term) / 2;
 }
