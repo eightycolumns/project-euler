@@ -6,6 +6,7 @@ int main(void) {
 
   int16_t n = 999 / 3;
   answer += n * (3 + 3 + (n - 1) * 3) / 2;
+
   n = 999 / 5;
   answer += n * (5 + 5 + (n - 1) * 5) / 2;
 
