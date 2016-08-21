@@ -6,6 +6,7 @@ int32_t sum_of_multiples_of(int8_t common_difference);
 int32_t nth_partial_sum(int16_t n, int8_t first_term, int16_t nth_term);
 int8_t lcm(int8_t a, int8_t b);
 int8_t max(int8_t a, int8_t b);
+bool is_divisible_by(int8_t a, int8_t b);
 
 int main(void) {
   int32_t answer = 0;
@@ -36,7 +37,7 @@ int8_t lcm(int8_t a, int8_t b) {
   int8_t lcm = step;
 
   while (true) {
-    if (lcm % a == 0 && lcm % b == 0) {
+    if (is_divisible_by(lcm, a) && is_divisible_by(lcm, b)) {
       break;
     }
 
@@ -48,4 +49,8 @@ int8_t lcm(int8_t a, int8_t b) {
 
 int8_t max(int8_t a, int8_t b) {
   return (a > b) ? a : b;
+}
+
+bool is_divisible_by(int8_t a, int8_t b) {
+  return a % b == 0;
 }
