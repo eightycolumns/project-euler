@@ -5,6 +5,7 @@
 int32_t sum_of_multiples_of(int8_t common_difference);
 int32_t nth_partial_sum(int16_t n, int8_t first_term, int16_t nth_term);
 int8_t lcm(int8_t a, int8_t b);
+int8_t max(int8_t a, int8_t b);
 
 int main(void) {
   int32_t answer = 0;
@@ -30,7 +31,7 @@ int32_t nth_partial_sum(int16_t n, int8_t first_term, int16_t nth_term) {
 }
 
 int8_t lcm(int8_t a, int8_t b) {
-  int8_t step = (a > b) ? a : b;
+  int8_t step = max(a, b);
 
   int8_t lcm = step;
 
@@ -43,4 +44,8 @@ int8_t lcm(int8_t a, int8_t b) {
   }
 
   return lcm;
+}
+
+int8_t max(int8_t a, int8_t b) {
+  return (a > b) ? a : b;
 }
