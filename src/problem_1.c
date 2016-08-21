@@ -9,10 +9,7 @@ int8_t max(int8_t a, int8_t b);
 bool is_divisible_by(int8_t a, int8_t b);
 
 int main(void) {
-  int32_t answer = 0;
-
-  answer += sum_of_multiples_of(3);
-  answer += sum_of_multiples_of(5);
+  int32_t answer = sum_of_multiples_of(3) + sum_of_multiples_of(5);
 
   answer -= sum_of_multiples_of(lcm(3, 5));
 
