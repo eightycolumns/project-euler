@@ -1,5 +1,8 @@
 #include <inttypes.h>
+#include <stdbool.h>
 #include <stdio.h>
+
+bool is_even(int32_t d);
 
 int main(void) {
   int32_t answer = 0;
@@ -8,7 +11,7 @@ int main(void) {
   int32_t current = 1;
 
   while (current <= 4000000) {
-    if (current % 2 == 0) {
+    if (is_even(current)) {
       answer += current;
     }
 
@@ -18,4 +21,8 @@ int main(void) {
   }
 
   printf("2) %" PRId32 "\n", answer);
+}
+
+bool is_even(int32_t d) {
+  return d % 2 == 0;
 }
