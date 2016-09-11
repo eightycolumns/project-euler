@@ -12,7 +12,7 @@ int main(void) {
     for (int16_t j = i; j < 1000; j += 1) {
       int32_t product = i * j;
 
-      if (is_palindrome(product) && product > answer) {
+      if (product > answer && is_palindrome(product)) {
         answer = product;
       }
     }
