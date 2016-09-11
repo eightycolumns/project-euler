@@ -9,7 +9,7 @@ int main(void) {
   int32_t answer = 0;
 
   for (int16_t i = 100; i < 1000; i += 1) {
-    for (int16_t j = 100; j < 1000; j += 1) {
+    for (int16_t j = i; j < 1000; j += 1) {
       int32_t product = i * j;
 
       if (is_palindrome(product) && product > answer) {
